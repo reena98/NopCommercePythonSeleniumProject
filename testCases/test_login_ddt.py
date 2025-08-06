@@ -1,3 +1,5 @@
+import os
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions
@@ -10,7 +12,10 @@ from utilities.customLogger import LogGen
 
 class Test_001_DDT_Login:
     baseURL = ReadConfig.getApplicationUrl()
-    path = "..\\TestData\\LoginData.xlsx"
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    excel_path = os.path.join(project_root, "TestData", "LoginData.xlsx")
+
+    path = os.path.normpath(excel_path)
 
     logger = LogGen().loggen()
     logger.info("Login test started.")
