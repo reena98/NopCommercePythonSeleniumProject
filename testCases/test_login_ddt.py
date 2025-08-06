@@ -10,7 +10,7 @@ from utilities.customLogger import LogGen
 
 class Test_001_DDT_Login:
     baseURL = ReadConfig.getApplicationUrl()
-    path = "C:\\Users\\reena\\Desktop\\PythonProjects\\SeleniumProject\\TestData\\LoginData.xlsx"
+    path = "..\\TestData\\LoginData.xlsx"
 
     logger = LogGen().loggen()
     logger.info("Login test started.")
